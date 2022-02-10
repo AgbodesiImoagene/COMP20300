@@ -1,0 +1,18 @@
+/*q1*/
+article {border: 1px solid}
+h1 {font-size: 0.8rem}
+blockquote {box-shadow: -10px 5px 5px black; font-size: 1.2rem}
+.my-padding {padding: 5px}
+
+/*q2*/
+.course-tables {border-collapse: collapse; text-align: center}
+.course-tables tr:nth-child(2n) {background: #66FF99}
+.small-letters {text-transform: lowercase}
+
+/*q3*/
+#menu li {list-style-type: none}
+li ul {display: none}
+li:hover ul{display: block}
+
+/*q4*/
+.column {width: 320px; float: left; padding: 2rem}
