@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Practical 4 - q2</title>
+	<script type="text/javascript">
+		function addNumbers() {
+			let x = document.querySelector("#tb1").value;
+			let y = document.querySelector("#tb2").value;
+			let form = document.querySelector("#myForm");
+			if (!isNaN(x) && !isNaN(y)) {
+				let z = Number(x) + Number(y);
+				document.querySelector("#tb3").setAttribute("value", z);
+				if (form.lastChild.nodeName === "P") {
+					form.removeChild(form.lastChild);
+				}
+			} else {
+				let paragraph = document.createElement("p");
+				let errorMessage = document.createTextNode("Invalid input. ");
+				paragraph.appendChild(errorMessage);
+				if (form.lastChild.nodeName !== "P") {
+					form.appendChild(paragraph);
+				}
+			}
+		}
+
+		function myScript() {
+			document.querySelector("#myForm").reset();
+			document.querySelector("#b1").addEventListener("click", addNumbers);
+		}
+
+		window.onload = myScript;
+	</script>
+</head>
+<body>
+	<form id="myForm">
+		<input id="tb1" type="text" name="Text box 1" value="">
+		<br>
+		<input id="tb2" type="text" name="Text box 2" value="">
+		<br>
+		<input id="tb3" type="text" name="Text box 3" value="" disabled>
+		<br>
+		<input id="b1" type="button" name="Button">
+		<label for="b1">go</label>
+	</form>
+</body>
+</html>

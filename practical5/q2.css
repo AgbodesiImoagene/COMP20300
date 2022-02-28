@@ -1,0 +1,9 @@
+#myCanvas{
+	width: 300px;
+	height: 300px;
+	border: 1px solid black;
+}
+#myForm input[type="button"] {
+	width: 50px;
+	display: block;
+}
